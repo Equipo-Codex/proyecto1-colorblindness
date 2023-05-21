@@ -116,7 +116,7 @@ let ntc = {
   },
 
   names: [
-["000000", "Black"],
+["000000", "Negro"],
 ["000080", "Navy Blue"],
 ["0000C8", "Dark Blue"],
 ["0000FF", "Blue"],
@@ -1681,10 +1681,11 @@ let ntc = {
 ["FFFF99", "Pale Canary"],
 ["FFFFB4", "Portafino"],
 ["FFFFF0", "Ivory"],
-["FFFFFF", "White"]
+["FFFFFF", "Blanco"]
 ]
 
 }
+
 
 // Obtener el elemento con el ID "start-button" y agregar un event listener para el evento "click"
 document.getElementById("start-button").addEventListener("click", () => {
@@ -1706,12 +1707,12 @@ document.getElementById("start-button").addEventListener("click", () => {
       .open()
       .then((result) => {
           // Obtener el nombre del color seleccionado y se muestra en un aviso pero
-          let n_match  = ntc.name(result.sRGBHex);
-          n_rgb        = n_match[0]; // This is the RGB value of the closest matching color
-          n_name       = n_match[1]; // This is the text string for the name of the match
-          n_exactmatch = n_match[2]; // True if exact color match, False if close-match
+          const n_match  = ntc.name(result.sRGBHex);
+          const n_rgb        = n_match[0]; // This is the RGB value of the closest matching color
+          const n_name       = n_match[1]; // This is the text string for the name of the match
+          const n_exactmatch = n_match[2]; // True if exact color match, False if close-match
           
-          alert(n_match);
+          document.getElementById('result').innerText = n_name
       })
       .catch((e) => {
           // Si ocurre un error durante el proceso de selección de color, mostrar el error en el elemento "result"
