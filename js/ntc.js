@@ -35,6 +35,10 @@ Sample Usage:
 
 let ntc = {
 
+/**
+ * Inicializa la función iterando a través de un arreglo de nombres de colores y
+ * convirtiéndolos en valores RGB y HSL para ser almacenados en el arreglo.
+ */
   init: function() {
     let color, rgb, hsl;
     for(let i = 0; i < ntc.names.length; i++)
@@ -46,6 +50,16 @@ let ntc = {
     }
   },
 
+
+/**
+ * Convierte una cadena de color a su color con nombre más cercano o a un color hexadecimal de seis o tres dígitos.
+ *
+ * @param {string} color - la cadena de color a convertir
+ * @return {Array} un arreglo que contiene tres elementos:
+ *                  1. la cadena de color convertida (ya sea un color hexadecimal de seis o tres dígitos o un color con nombre)
+ *                  2. el nombre del color con nombre más cercano (si existe alguno)
+ *                  3. un booleano que indica si se encontró un color con nombre
+ */
   name: function(color) {
 
     color = color.toUpperCase();
@@ -81,8 +95,12 @@ let ntc = {
     return (cl < 0 ? ["#000000", "Invalid Color: " + color, false] : ["#" + ntc.names[cl][0], ntc.names[cl][1], false]);
   },
 
-  // adopted from: Farbtastic 1.2
-  // http://acko.net/dev/farbtastic
+/**
+ * Convierte un color del formato HSL al formato RGB.
+ *
+ * @param {string} color - Una cadena que representa el valor hexadecimal del color HSL.
+ * @return {number[]} Un arreglo de tres enteros que representa el color RGB.
+ */
   hsl: function (color) {
 
     let rgb = [parseInt('0x' + color.substring(1, 3)) / 255, parseInt('0x' + color.substring(3, 5)) / 255, parseInt('0x' + color.substring(5, 7)) / 255];
@@ -109,8 +127,12 @@ let ntc = {
     return [parseInt(h * 255), parseInt(s * 255), parseInt(l * 255)];
   },
 
-  // adopted from: Farbtastic 1.2
-  // http://acko.net/dev/farbtastic
+/**
+ * Convierte un código de color hexadecimal a un arreglo RGB.
+ *
+ * @param {string} color - El código de color hexadecimal a convertir.
+ * @return {Array} Un arreglo que contiene los valores RGB.
+ */
   rgb: function(color) {
     return [parseInt('0x' + color.substring(1, 3)), parseInt('0x' + color.substring(3, 5)),  parseInt('0x' + color.substring(5, 7))];
   },
@@ -354,7 +376,7 @@ let ntc = {
 ["317D82", "Paradiso"],
 ["32127A", "Persian Indigo"],
 ["32293A", "Blackcurrant"],
-["323232", "Mine Shaft"],
+["323232", "Gris Oscuro"],
 ["325D52", "Stromboli"],
 ["327C14", "Bilbao"],
 ["327DA0", "Astral"],
@@ -1211,7 +1233,7 @@ let ntc = {
 ["DB5079", "Cranberry"],
 ["DB9690", "Petite Orchid"],
 ["DB995E", "Di Serria"],
-["DBDBDB", "Alto"],
+["DBDBDB", "Gris"],
 ["DBFFF8", "Frosted Mint"],
 ["DC143C", "Crimson"],
 ["DC4333", "Punch"],
@@ -1550,7 +1572,7 @@ let ntc = {
 ["FEF8FF", "White Pointer"],
 ["FEF9E3", "Off Yellow"],
 ["FEFCED", "Orange White"],
-["FF0000", "Red"],
+["FF0000", "Rojo"],
 ["FF007F", "Rose"],
 ["FF00CC", "Purple Pizzazz"],
 ["FF00FF", "Magenta / Fuchsia"],
@@ -1706,7 +1728,7 @@ document.getElementById("start-button").addEventListener("click", () => {
   eyeDropper
       .open()
       .then((result) => {
-          // Obtener el nombre del color seleccionado y se muestra en un aviso pero
+          // Obtener el nombre del color seleccionado y ser mostrado en pantalla
           const n_match  = ntc.name(result.sRGBHex);
           const n_rgb        = n_match[0]; // This is the RGB value of the closest matching color
           const n_name       = n_match[1]; // This is the text string for the name of the match
@@ -1715,8 +1737,8 @@ document.getElementById("start-button").addEventListener("click", () => {
           document.getElementById('result').innerText = n_name
       })
       .catch((e) => {
-          // Si ocurre un error durante el proceso de selección de color, mostrar el error en el elemento "result"
-          resultElement.textContent = e;
+          // Si ocurre un error durante el proceso de selección de color, vuelve a ser el mensaje del inicio
+          resultElement.textContent = "...";
       });
 
       
