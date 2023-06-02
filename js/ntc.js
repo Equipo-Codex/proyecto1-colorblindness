@@ -634,7 +634,7 @@ let ntc = {
 ["6CDAE7", "Turquoise Blue"],
 ["6D0101", "Lonestar"],
 ["6D5E54", "Pine Cone"],
-["6D6C6C", "Dove Gray"],
+["6D6C6C", "Gris"],
 ["6D9292", "Juniper"],
 ["6D92A1", "Gothic"],
 ["6E0902", "Red Oxide"],
@@ -709,7 +709,7 @@ let ntc = {
 ["79DEEC", "Spray"],
 ["7A013A", "Siren"],
 ["7A58C1", "Fuchsia Blue"],
-["7A7A7A", "Boulder"],
+["7A7A7A", "Gris"],
 ["7A89B8", "Wild Blue Yonder"],
 ["7AC488", "De York"],
 ["7B3801", "Red Beech"],
@@ -749,7 +749,7 @@ let ntc = {
 ["80461B", "Russet"],
 ["807E79", "Friar Gray"],
 ["808000", "Olive"],
-["808080", "Gray"],
+["808080", "Gris"],
 ["80B3AE", "Gulf Stream"],
 ["80B3C4", "Glacier"],
 ["80CCEA", "Seagull"],
@@ -977,7 +977,7 @@ let ntc = {
 ["AF4D43", "Apple Blossom"],
 ["AF593E", "Brown Rust"],
 ["AF8751", "Driftwood"],
-["AF8F2C", "Alpine"],
+["AF8F2C", "Amarillo Oscuro"],
 ["AF9F1C", "Lucky"],
 ["AFA09E", "Martini"],
 ["AFB1B8", "Bombay"],
@@ -1431,7 +1431,7 @@ let ntc = {
 ["F3FFD8", "Carla"],
 ["F400A1", "Hollywood Cerise"],
 ["F4A460", "Sandy brown"],
-["F4C430", "Saffron"],
+["F4C430", "Amarrillo Claro"],
 ["F4D81C", "Ripe Lemon"],
 ["F4EBD3", "Janna"],
 ["F4F2EE", "Pampas"],
@@ -1554,7 +1554,7 @@ let ntc = {
 ["FE9D04", "California"],
 ["FEA904", "Yellow Sea"],
 ["FEBAAD", "Melon"],
-["FED33C", "Bright Sun"],
+["FED33C", "Amarillo"],
 ["FED85D", "Dandelion"],
 ["FEDB8D", "Salomie"],
 ["FEE5AC", "Cape Honey"],
@@ -1735,17 +1735,23 @@ document.getElementById("start-button").addEventListener("click", () => {
           const n_exactmatch = n_match[2]; // True if exact color match, False if close-match
           
           document.getElementById('result').innerText = n_name
+
+          const hexa = document.getElementById('hexa')
+
+          if (hexa.checked) {
+            document.getElementById('result-hexa').innerText = n_rgb
+          }
+          
       })
       .catch((e) => {
           // Si ocurre un error durante el proceso de selección de color, vuelve a ser el mensaje del inicio
           resultElement.textContent = "...";
       });
 
+
+
       
 });
-
-
-
 
 
 

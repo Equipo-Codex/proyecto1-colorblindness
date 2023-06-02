@@ -10,8 +10,23 @@
 <body>
     <div class="container">
         <button id="start-button">Haz click para consultar</button> <span id="result">...</span>
-    
+        
+        <div class="checks">
+            <div class="darkmode">
+                <label for="darkmode">🌙 Modo Oscuro</label>
+                <input type="checkbox" id="darkmode">
+            </div>
+            
+            <div class="hexa">
+                <label for="hexa">🖍️ HEXA</label>
+                <input type="checkbox" id="hexa">
+                <span id="result-hexa"> </span>
+            </div>
+        </div>
+        
         <script type="text/javascript" src="js/ntc.js"></script>
+        <script src="js/modooscuro.js"></script>
+        <script src="js/hexa.js"></script>
     </div>
 </body>
 </html>
