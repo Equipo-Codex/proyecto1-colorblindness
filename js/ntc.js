@@ -1736,20 +1736,23 @@ document.getElementById("start-button").addEventListener("click", () => {
           
           document.getElementById('result').innerText = n_name
 
-          const hexa = document.getElementById('hexa')
 
-          if (hexa.checked) {
+          const hexa = document.getElementById('hexa')
+          
+          if (hexa.checked){
             document.getElementById('result-hexa').innerText = n_rgb
           }
-          
+          if (hexa.checked){
+            hexa.addEventListener("change", () => {
+              document.getElementById('result-hexa').innerText = ""
+            })
+          }
+
       })
       .catch((e) => {
           // Si ocurre un error durante el proceso de selección de color, vuelve a ser el mensaje del inicio
           resultElement.textContent = "...";
       });
-
-
-
       
 });
 

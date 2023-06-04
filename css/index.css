@@ -82,3 +82,6 @@ body{
     margin-top: 5%;
 }
 
+#label-hexa{
+    position: absolute;
+}
