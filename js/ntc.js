@@ -1,8 +1,3 @@
-/*---------------------------+---------------------------------------+---------------------*/
-/*--------------------------/ FUSION DE API DE EYE DROPPER Y NTC JS /---------------------*/
-/*-------------------------+---------------------------------------+---------------------*/
-
-
 /*
 ---------------------------------------------------------------------------------------------------------------
 |-----------------------------------------------------------------|
@@ -11,25 +6,8 @@
 
 All the functions, code, lists etc. have been written specifically
 for the Name that Color JavaScript by Chirag Mehta unless otherwise
-specified.
-
-This script is released under the: Creative Commons License:
-Attribution 2.5 http://creativecommons.org/licenses/by/2.5/
-
-Sample Usage:
-
-  <script type="text/javascript" src="ntc.js"></script>
-
-  <script type="text/javascript">
-
-    let n_match  = ntc.name("#6195ED");
-    n_rgb        = n_match[0]; // This is the RGB value of the closest matching color
-    n_name       = n_match[1]; // This is the text string for the name of the match
-    n_exactmatch = n_match[2]; // True if exact color match, False if close-match
-
-    alert(n_match);
-
-  </script>
+specified.Complete colloquial spanish translation by EquipoCodex for
+DearColors project, a nav extension for Color Blind.
 
 */
 
@@ -634,7 +612,7 @@ let ntc = {
 ["6CDAE7", "Turquoise Blue"],
 ["6D0101", "Lonestar"],
 ["6D5E54", "Pine Cone"],
-["6D6C6C", "Dove Gray"],
+["6D6C6C", "Gris"],
 ["6D9292", "Juniper"],
 ["6D92A1", "Gothic"],
 ["6E0902", "Red Oxide"],
@@ -709,7 +687,7 @@ let ntc = {
 ["79DEEC", "Spray"],
 ["7A013A", "Siren"],
 ["7A58C1", "Fuchsia Blue"],
-["7A7A7A", "Boulder"],
+["7A7A7A", "Gris"],
 ["7A89B8", "Wild Blue Yonder"],
 ["7AC488", "De York"],
 ["7B3801", "Red Beech"],
@@ -749,7 +727,7 @@ let ntc = {
 ["80461B", "Russet"],
 ["807E79", "Friar Gray"],
 ["808000", "Olive"],
-["808080", "Gray"],
+["808080", "Gris"],
 ["80B3AE", "Gulf Stream"],
 ["80B3C4", "Glacier"],
 ["80CCEA", "Seagull"],
@@ -977,7 +955,7 @@ let ntc = {
 ["AF4D43", "Apple Blossom"],
 ["AF593E", "Brown Rust"],
 ["AF8751", "Driftwood"],
-["AF8F2C", "Alpine"],
+["AF8F2C", "Amarillo Oscuro"],
 ["AF9F1C", "Lucky"],
 ["AFA09E", "Martini"],
 ["AFB1B8", "Bombay"],
@@ -1431,7 +1409,7 @@ let ntc = {
 ["F3FFD8", "Carla"],
 ["F400A1", "Hollywood Cerise"],
 ["F4A460", "Sandy brown"],
-["F4C430", "Saffron"],
+["F4C430", "Amarrillo Claro"],
 ["F4D81C", "Ripe Lemon"],
 ["F4EBD3", "Janna"],
 ["F4F2EE", "Pampas"],
@@ -1554,7 +1532,7 @@ let ntc = {
 ["FE9D04", "California"],
 ["FEA904", "Yellow Sea"],
 ["FEBAAD", "Melon"],
-["FED33C", "Bright Sun"],
+["FED33C", "Amarillo"],
 ["FED85D", "Dandelion"],
 ["FEDB8D", "Salomie"],
 ["FEE5AC", "Cape Honey"],
@@ -1707,46 +1685,5 @@ let ntc = {
 ]
 
 }
-
-
-// Obtener el elemento con el ID "start-button" y agregar un event listener para el evento "click"
-document.getElementById("start-button").addEventListener("click", () => {
-  // Obtener el elemento con el ID "result"
-  const resultElement = document.getElementById("result");
-
-  // Verificar si la propiedad "EyeDropper" está disponible en el objeto global "window"
-  if (!window.EyeDropper) {
-      // Si no está disponible, mostrar un mensaje de error en el elemento "result"
-      resultElement.textContent = "Tu navegador no soporta esta extensión, prueba con navegadores basados en Chromium";
-      return;
-  }
-
-  // Crear una instancia de EyeDropper
-  const eyeDropper = new EyeDropper();
-
-  // Abrir la herramienta EyeDropper y esperar a que el usuario seleccione un color
-  eyeDropper
-      .open()
-      .then((result) => {
-          // Obtener el nombre del color seleccionado y ser mostrado en pantalla
-          const n_match  = ntc.name(result.sRGBHex);
-          const n_rgb        = n_match[0]; // This is the RGB value of the closest matching color
-          const n_name       = n_match[1]; // This is the text string for the name of the match
-          const n_exactmatch = n_match[2]; // True if exact color match, False if close-match
-          
-          document.getElementById('result').innerText = n_name
-      })
-      .catch((e) => {
-          // Si ocurre un error durante el proceso de selección de color, vuelve a ser el mensaje del inicio
-          resultElement.textContent = "...";
-      });
-
-      
-});
-
-
-
-
-
 
 ntc.init();

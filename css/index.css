@@ -19,6 +19,9 @@ body{
     box-shadow: 0 0 5px 0 #6666664d
 }
 
+#result-hexa{
+    color: #000;
+}
 
 #start-button{
     font-family: 'Ubuntu', sans-serif;
@@ -46,4 +49,42 @@ body{
     color: #000;
     border-radius: 5px;
     box-shadow: 0 0 5px 0 #6666664d
+}
+
+.dark{
+    background-color: #000;
+}
+
+.dark #start-button{
+    color: #ffffff;
+    background-color: #4d4d4d;
+}
+
+.dark #start-button:hover{
+    color: #ffffff;
+    background-color: #858484;
+}
+
+.dark label{
+    color: #ffffff;
+}
+
+.dark #result{
+    background-color: #6e6e6e;
+    color: #ffffff;
+}
+
+.dark #result-hexa{
+    color: #ffffff;
+}
+
+.darkmode{
+    margin-top: 5%;
+}
+
+.hexa{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
 }
