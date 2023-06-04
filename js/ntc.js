@@ -6,7 +6,8 @@
 
 All the functions, code, lists etc. have been written specifically
 for the Name that Color JavaScript by Chirag Mehta unless otherwise
-specified.Complete colloquial spanish translation by EquipoCodex for DearColors project, one nav extension for Color Blind.
+specified.Complete colloquial spanish translation by EquipoCodex for
+DearColors project, a nav extension for Color Blind.
 
 */
 
