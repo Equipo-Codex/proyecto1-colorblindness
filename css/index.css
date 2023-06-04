@@ -82,6 +82,9 @@ body{
     margin-top: 5%;
 }
 
-#label-hexa{
-    position: absolute;
+.hexa{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
 }
