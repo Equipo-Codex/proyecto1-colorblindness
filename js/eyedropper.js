@@ -29,8 +29,7 @@ document.getElementById("start-button").addEventListener("click", () => {
             
             if (hexa.checked){
                 document.getElementById('result-hexa').innerText = n_rgb
-            }
-            if (hexa.checked){
+                
                 hexa.addEventListener("change", () => {
                     document.getElementById('result-hexa').innerText = ""
                 })
