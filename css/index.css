@@ -4,6 +4,7 @@ body{
     font-family: 'Ubuntu', sans-serif;
     display: flex;
     justify-content: center;
+    background-color: #f4f4f4e1;
 }
 
 .container{
@@ -52,7 +53,7 @@ body{
 }
 
 .dark{
-    background-color: #000;
+    background-color: #0D1117;
 }
 
 .dark #start-button{
