@@ -1,0 +1,42 @@
+body {
+    background-color: #25272C;
+}
+
+header {
+    background-color: #2a2c31;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 10px;
+    gap: 1px;
+}
+
+.btn {
+    padding: 10px;
+}
+
+.logo {
+    color: aliceblue;
+    margin-left: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.recuadro {
+    border: 2px solid white;
+    padding: 10px;
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+   
+}

@@ -1662,7 +1662,7 @@ let ntc = {
     ["FFFACD", "Amarillo Claro"],
     ["FFFAF4", "Marrón Rosado Claro"],
     ["FFFBDC", "Amarillo Claro"],
-    ["FFFBF9", "Rojo Grisaceo Claro"],
+    ["FFFBF9", "Blanco Amarillento Grisaceo Claro"],
     ["FFFC99", "Amarillo Claro"],
     ["FFFCEA", "Amarillo Claro"],
     ["FFFCEE", "Amarillo Claro"],
