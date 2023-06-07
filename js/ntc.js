@@ -221,7 +221,7 @@ let ntc = {
     ["0C7A79", "Celeste Verdoso Oscuro"],
     ["0C8990", "Celeste Oscuro"],
     ["0D0332", "Azul Oscuro"],
-    ["0D1117", "Negro"],
+    ["0D1117", "Azul Oscuro"],
     ["0D1C19", "Negro"],
     ["0D2E1C", "Verde Oscuro"],
     ["0E0E18", "Negro"],
