@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "DearColors",
+    "version": "0.1",
+    "description": "Enfocada a daltonismo, DearColors es una extension de consultas de color, de una forma simple y coloquial.",
+    "icons": {
+        "16": "/img/icons/icon16.png",
+        "48": "/img/icons/icon48.png",
+        "128": "/img/icons/icon128.png"
+    },
+    "browser_action": {
+        "default_popup": "index.html"
+    },
+    "permissions": [
+        "tabs",
+        "storage"
+    ]
+}
