@@ -1,5 +1,5 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "DearColors",
     "version": "0.1",
     "description": "Enfocada a daltonismo, DearColors es una extension de consultas de color, de una forma simple y coloquial.",
