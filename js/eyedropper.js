@@ -63,4 +63,5 @@ document.getElementById("start-button").addEventListener("click", () => {
         togglePageVisibility();
     //Hace la captura despues de que se oculte
         activateAndCapture();
+        
 });
