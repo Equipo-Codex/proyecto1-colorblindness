@@ -1,6 +1,6 @@
-const container=document.getElementById('container')
-const darkmode = document.getElementById('darkmode')
+const body = document.body;
+const darkmode = document.getElementById('darkmode');
+
 darkmode.addEventListener('click', () => {
-    container.classList.toggle('dark')
-    
-})
+  body.classList.toggle('dark');
+});

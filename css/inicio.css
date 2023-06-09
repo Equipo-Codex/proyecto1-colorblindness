@@ -1,42 +1,85 @@
-body {
-    background-color: #25272C;
-}
-
+/* Estilos para el header */
 header {
-    background-color: #2a2c31;
-}
-
-.nav {
+    background-color: #333;
+    padding: 10px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    margin-right: 10px;
-    gap: 1px;
-}
-
-.btn {
-    padding: 10px;
-}
-
-.logo {
-    color: aliceblue;
-    margin-left: 10px;
+  }
+  
+  .centered-list {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-grow: 1;
-}
-
-.recuadro {
-    border: 2px solid white;
+    align-items: center;
+  }
+  
+  .nav {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Mueve los botones al otro costado */
+  }
+  
+  .logo {
+    margin-right: 20px;
+  }
+  
+  .logo h1 {
+    color: white;
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .nav-item {
+    margin-left: 5px; /* Ajusta el espaciado entre los botones */
+  }
+  
+  .nav-item .btn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 14px;
+  }
+  
+  
+  /* Estilos para el main */
+  main {
+    padding: 20px;
+  }
+  
+  .recuadro {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  /* Estilos para el footer */
+  footer {
+    background-color: #333;
     padding: 10px;
+    text-align: center;
     color: white;
-}
-h6{
-    color: white;
-display: flex;
-justify-content: flex-end;
-align-items: flex-end;
-height: 50px;
-margin-right: 10px;
-}
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  footer h6 {
+    margin: 0;
+  }
+  
+  footer b {
+    font-weight: bold;
+  }
+  
+  
+  /* Estilos generales */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
