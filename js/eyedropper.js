@@ -40,7 +40,7 @@ document.getElementById("start-button").addEventListener("click", () => {
                 const hexa = document.getElementById('hexa');
 
                 if (hexa.checked) {
-                    document.getElementById('result-hexa').innerText = n_rgb;
+                    document.getElementById('result-hexa').innerText = result.sRGBHex;;
 
                     hexa.addEventListener("change", () => {
                         document.getElementById('result-hexa').innerText = "";

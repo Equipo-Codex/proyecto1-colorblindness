@@ -395,6 +395,7 @@ let ntc = {
     ["3B1F1F", "Rojo Grisáceo Oscuro"],
     ["3B2820", "Marrón Grisáceo Oscuro"],
     ["3B7A57", "Verde Grisáceo Oscuro"],
+    ["00BBFE", "Celeste"],
     ["3B91B4", "Celeste Oscuro"],
     ["3C0878", "Violeta Azulado"],
     ["3C1206", "Naranja Negro"],
